@@ -1,34 +1,34 @@
 const initialState = {
   isFetching: false,
-  error: '',
   count: 0,
-  spells: {
+  error: '',
+  races: {
     index: '',
     name: '',
     url: '',
   },
 };
 
-export const spellsReducer = (state = initialState, action) => {
+export const raceReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'Fetch_Spells_Start':
+    case 'Race_Fetch_Start':
       return {
         ...state,
         isFetching: true,
       };
-    case 'Spells_Fetching_Status_Success':
+    case 'Race_Fetch_Success':
       return {
         ...state,
         isFetching: false,
-        count: state.count + state.spells.length,
-        spells: {
-          ...state.spells,
+        count: state.count + state.races.length,
+        races: {
+          ...state.races,
           index: action.index,
           name: action.name,
           url: action.url,
         },
       };
-    case 'Spells_Fetch_Status_Failure':
+    case 'Race_Fetch_Failure':
       return {
         ...state,
         isFetching: false,

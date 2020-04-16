@@ -5,4 +5,5 @@ import { classesReducer as classes } from './classesReducer';
 export default combineReducers({
   spells,
   classes,
+  races,
 });
