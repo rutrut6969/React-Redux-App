@@ -6,12 +6,8 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <section className='Head'>
-        <Head />
-      </section>
-      <section className='Body'>
-        <Body />
-      </section>
+      <Head />
+      <Body />
     </div>
   );
 }

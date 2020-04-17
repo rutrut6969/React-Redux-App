@@ -1,0 +1,14 @@
+.Body {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  margin-top: 2%;
+  border: 1px solid rgba(0, 0, 0, 0.356);
+  background-color: rgba(107, 13, 13, 0.514);
+  width: 15%;
+  cursor: pointer;
+}

@@ -33,6 +33,6 @@ export const classesReducer = (state = initialState, action) => {
         error: action.error,
       };
     default:
-      state;
+      return state;
   }
 };

@@ -1,15 +1,13 @@
 const initialState = {
+  spell: false,
   isFetching: false,
   error: '',
   count: 0,
-  spells: {
-    index: '',
-    name: '',
-    url: '',
-  },
+  results: {},
 };
 
 export const spellsReducer = (state = initialState, action) => {
+  console.log(state);
   switch (action.type) {
     case 'Fetch_Spells_Start':
       return {
@@ -19,14 +17,10 @@ export const spellsReducer = (state = initialState, action) => {
     case 'Spells_Fetching_Status_Success':
       return {
         ...state,
+        spell: true,
         isFetching: false,
-        count: state.count + state.spells.length,
-        spells: {
-          ...state.spells,
-          index: action.index,
-          name: action.name,
-          url: action.url,
-        },
+        count: state.count + state.results.length,
+        results: action.payload,
       };
     case 'Spells_Fetch_Status_Failure':
       return {
@@ -35,6 +29,6 @@ export const spellsReducer = (state = initialState, action) => {
         error: action.error,
       };
     default:
-      state;
+      return state;
   }
 };
