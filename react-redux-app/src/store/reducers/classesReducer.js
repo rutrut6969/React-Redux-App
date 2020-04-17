@@ -1,12 +1,9 @@
 const initialState = {
+  class: false,
   isFetching: false,
   count: 0,
   error: '',
-  classes: {
-    index: '',
-    name: '',
-    url: '',
-  },
+  results: {},
 };
 
 export const classesReducer = (state = initialState, action) => {
@@ -19,18 +16,20 @@ export const classesReducer = (state = initialState, action) => {
     case 'Classes_Fetch_Success':
       return {
         ...state,
+        class: true,
         isFetching: false,
-        count: state.count + state.classes.length,
-        classes: {
-          index: action.index,
-          name: action.name,
-          url: action.url,
-        },
+        count: state.count + state.results.length,
+        results: action.payload,
       };
     case 'Classes_Fetch_Failure':
       return {
         ...state,
         error: action.error,
+      };
+    case 'Class_Disable':
+      return {
+        ...state,
+        class: false,
       };
     default:
       return state;

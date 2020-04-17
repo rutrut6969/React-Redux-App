@@ -8,6 +8,9 @@ export const fetchSpells = () => {
     axios
       .get('http://www.dnd5eapi.co/api/spells')
       .then((res) => {
+        dispatch({ type: 'Race_Disable' });
+        dispatch({ type: 'Class_Disable' });
+
         dispatch({
           type: 'Spells_Fetching_Status_Success',
           payload: res.data.results,

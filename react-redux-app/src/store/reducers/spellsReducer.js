@@ -28,6 +28,11 @@ export const spellsReducer = (state = initialState, action) => {
         isFetching: false,
         error: action.error,
       };
+    case 'Spell_Disable':
+      return {
+        ...state,
+        spell: false,
+      };
     default:
       return state;
   }
