@@ -1,0 +1,61 @@
+.Head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5%;
+  height: 40px;
+  background-color: red;
+  box-shadow: 1px 1px 5px black;
+}
+.buttons {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+.btn {
+  padding: 0.5%;
+  width: 70px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 7px black;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+  transition: 0.4s ease-out;
+}
+.searchInput {
+  height: 23px;
+  border-radius: 5px 0 0 5px;
+  padding: 0.3%;
+  border: none;
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchbtn {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 1.2%;
+  width: 60px;
+  height: 24px;
+  margin-left: 0px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.searchbtn:hover {
+  color: black;
+  background-color: white;
+  transition: 0.4s ease-out;
+}
+.searchBar {
+  /* border: 1px solid black; */
+  box-shadow: 2px 2px 7px black;
+  height: 24px;
+  border-radius: 5px;
+  width: 230.5px;
+}
